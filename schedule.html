@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Consult | Organiza Eliza</title>
+  <meta name="description" content="Schedule a free home organizing consultation with Organiza Eliza. Pick a time or send a booking request.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1">
+
+  <!-- ===== CALENDLY (optional) =====
+       To turn on live booking:
+       1. Create a free account at calendly.com and set up an event (e.g. "Free Consult").
+       2. Uncomment the <link> and <script> lines below.
+       3. In the page, replace YOUR-CALENDLY-URL in the .calendly-inline-widget data-url. -->
+  <!--
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  -->
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">OE</div>
+        <div class="brand-text">
+          <h1>Organiza Eliza</h1>
+          <p>Home Organizing Studio</p>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="nav" id="navMenu">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link nav-cta active" href="schedule.html">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Let's Get Started</p>
+        <h2>Book Your Free Consult</h2>
+        <p>
+          Pick a time on the calendar below for a free 20-minute call — or send a
+          booking request and I'll reach out to find a time that works.
+        </p>
+      </div>
+    </section>
+
+    <!-- Calendar embed -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        <div class="embed-section">
+          <p class="embed-label">Step 1 &mdash; Pick a Time</p>
+
+          <!-- When Calendly is set up, replace this whole .embed-container with:
+               <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR-CALENDLY-URL"
+                    style="min-width:320px;height:640px;"></div> -->
+          <div class="embed-container">
+            <div class="embed-placeholder">
+              <div class="embed-icon">&#128197;</div>
+              <h4>Booking calendar goes here</h4>
+              <p>
+                Connect a free <strong>Calendly</strong> account to let clients self-book.
+                Follow the steps in the comment at the top of this file, then paste your link.
+              </p>
+              <p>Your scheduling link will look like <code>calendly.com/organizaeliza</code></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking request form (works right now, no setup needed) -->
+        <div class="embed-section">
+          <p class="embed-label">Or &mdash; Send a Booking Request</p>
+          <form class="form-card" id="bookingForm" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="service">What do you need help with?</label>
+                <select id="service" name="service">
+                  <option>Closets &amp; Wardrobes</option>
+                  <option>Kitchens &amp; Pantries</option>
+                  <option>Home Office &amp; Paperwork</option>
+                  <option>Kids' Rooms &amp; Playrooms</option>
+                  <option>Moving &amp; Unpacking</option>
+                  <option>Whole-Home Refresh</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="date">Preferred date</label>
+                <input type="date" id="date" name="date">
+              </div>
+            </div>
+            <div class="form-group full">
+              <label for="message">Tell me about your space</label>
+              <textarea id="message" name="message" placeholder="A few sentences about the room(s) and what's driving you crazy..."></textarea>
+            </div>
+            <div class="form-group full" style="margin-bottom: 0;">
+              <button type="submit" class="btn btn-lg" style="width:100%; justify-content:center;">Send Request</button>
+            </div>
+            <p id="formNote" style="text-align:center; color:var(--accent-deep); font-size:14px; margin-top:16px; display:none;"></p>
+          </form>
+          <p class="text-center" style="color: var(--text-secondary); font-size: 13px; margin-top: 16px;">
+            Prefer email? Reach me anytime at <strong>hello@organizaeliza.com</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What happens next -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">What Happens Next</p>
+          <h2 class="section-title">From request to results</h2>
+          <p class="section-subtitle">Booking is the easy part — here's how the rest works.</p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card" style="text-align:center;">
+            <div class="card-icon" style="margin:0 auto 16px;">1</div>
+            <h3>We Connect</h3>
+            <p>On our free 20-minute call, we'll talk through your space, goals, and timeline.</p>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="card-icon clay" style="margin:0 auto 16px;">2</div>
+            <h3>I Build a Plan</h3>
+            <p>You'll get a tailored plan, a product list, and a quote — no surprises.</p>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="card-icon" style="margin:0 auto 16px;">3</div>
+            <h3>We Transform It</h3>
+            <p>We organize together, I haul away the donations, and you enjoy the calm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Organiza Eliza</h4>
+          <p>Calm, functional, beautiful spaces — one room at a time.</p>
+        </div>
+        <div class="row gap-sm">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="gallery.html">Gallery</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="schedule.html">Book Now</a>
+        </div>
+      </div>
+      <div class="footer-inner">
+        <p>&copy; 2026 Organiza Eliza. All rights reserved.</p>
+        <p>hello@organizaeliza.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
