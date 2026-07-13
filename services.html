@@ -344,6 +344,10 @@ h1, h2, h3, .display { font-family: var(--display); }
   gap: 20px;
 }
 
+.card-grid.process-grid { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .card-grid.process-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .card-grid.process-grid { grid-template-columns: 1fr; } }
+
 .card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -912,7 +916,7 @@ h1, h2, h3, .display { font-family: var(--display); }
           <p class="section-subtitle">Four steps from "I can't deal with this room" to "I love being in here."</p>
         </div>
 
-        <div class="card-grid">
+        <div class="card-grid process-grid">
           <div class="card" style="text-align:center;">
             <div class="card-icon" style="margin:0 auto 16px;">1</div>
             <h3>Consult</h3>
@@ -928,8 +932,6 @@ h1, h2, h3, .display { font-family: var(--display); }
             <h3>Organize</h3>
             <p>We sort, edit, and set up together — at a pace that feels good, judgment-free.</p>
           </div>
-        </div>
-        <div class="card-grid" style="margin-top: 20px; max-width: 380px; margin-left:auto; margin-right:auto;">
           <div class="card" style="text-align:center;">
             <div class="card-icon clay" style="margin:0 auto 16px;">4</div>
             <h3>Maintain</h3>
