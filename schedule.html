@@ -829,15 +829,8 @@ h1, h2, h3, .display { font-family: var(--display); }
 
 </style>
 
-  <!-- ===== CALENDLY (optional) =====
-       To turn on live booking:
-       1. Create a free account at calendly.com and set up an event (e.g. "Free Consult").
-       2. Uncomment the <link> and <script> lines below.
-       3. In the page, replace YOUR-CALENDLY-URL in the .calendly-inline-widget data-url. -->
-  <!--
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  -->
+  <!-- Booking uses a Google Calendar appointment schedule, embedded below.
+       To change it, replace the calendar.app.google URL in the iframe (and its fallback link). -->
 </head>
 <body>
 
@@ -881,20 +874,14 @@ h1, h2, h3, .display { font-family: var(--display); }
         <div class="embed-section">
           <p class="embed-label">Step 1 &mdash; Pick a Time</p>
 
-          <!-- When Calendly is set up, replace this whole .embed-container with:
-               <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR-CALENDLY-URL"
-                    style="min-width:320px;height:640px;"></div> -->
           <div class="embed-container">
-            <div class="embed-placeholder">
-              <div class="embed-icon">&#128197;</div>
-              <h4>Booking calendar goes here</h4>
-              <p>
-                Connect a free <strong>Calendly</strong> account to let clients self-book.
-                Follow the steps in the comment at the top of this file, then paste your link.
-              </p>
-              <p>Your scheduling link will look like <code>calendly.com/organizaeliza</code></p>
-            </div>
+            <iframe src="https://calendar.app.google/BMFeHbEoqb7GjAqD6"
+                    style="border:0; width:100%; min-height:640px;" frameborder="0"
+                    title="Book a consult with Organiza Eliza" loading="lazy"></iframe>
           </div>
+          <p class="text-center" style="color: var(--text-secondary); font-size: 13.5px; margin-top: 14px;">
+            Calendar not showing? <a href="https://calendar.app.google/BMFeHbEoqb7GjAqD6" target="_blank" rel="noopener" style="color: var(--accent-deep); font-weight: 600;">Open the booking page &rarr;</a>
+          </p>
         </div>
 
         <!-- Booking request form (works right now, no setup needed) -->
