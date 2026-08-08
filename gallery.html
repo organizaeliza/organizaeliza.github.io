@@ -127,6 +127,7 @@ h1, h2, h3, .display { font-family: var(--display); }
   color: var(--text-secondary);
   border: 1px solid transparent;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -827,6 +828,23 @@ h1, h2, h3, .display { font-family: var(--display); }
   .stats-row { grid-template-columns: 1fr; gap: 28px; }
 }
 
+@media (max-width: 860px) {
+  .nav { display: none; }
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    gap: 8px;
+  }
+  .nav-toggle { display: block; }
+}
+
 </style>
 </head>
 <body>
@@ -845,6 +863,7 @@ h1, h2, h3, .display { font-family: var(--display); }
       <nav class="nav" id="navMenu">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="how-it-works.html">How It Works</a>
         <a class="nav-link active" href="gallery.html">Gallery</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link nav-cta" href="schedule.html">Book Now</a>
@@ -973,6 +992,7 @@ h1, h2, h3, .display { font-family: var(--display); }
         <div class="row gap-sm">
           <a class="nav-link" href="index.html">Home</a>
           <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="how-it-works.html">How It Works</a>
           <a class="nav-link" href="gallery.html">Gallery</a>
           <a class="nav-link" href="about.html">About</a>
           <a class="nav-link" href="schedule.html">Book Now</a>
