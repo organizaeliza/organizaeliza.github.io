@@ -924,6 +924,18 @@ h1, h2, h3, .display { font-family: var(--display); }
   .nav-toggle { display: block; }
 }
 
+.step-list { margin: 2px 0 10px 20px; }
+.step-list li { color: var(--text-secondary); font-size: 15.5px; line-height: 1.7; list-style: disc; padding: 1px 0; }
+
+/* ---- FAQ ---- */
+.faq { max-width: 760px; margin: 0 auto; }
+.faq-item { padding: 26px 0; border-top: 1px solid var(--border); }
+.faq-item:first-child { border-top: none; padding-top: 4px; }
+.faq-q { font-family: var(--display); font-size: 21px; font-weight: 500; margin-bottom: 10px; color: var(--text); line-height: 1.3; }
+.faq-a { color: var(--text-secondary); font-size: 15.5px; line-height: 1.75; }
+.faq-a p { margin-bottom: 10px; }
+.faq-a p:last-child { margin-bottom: 0; }
+
 </style>
 </head>
 <body>
@@ -956,15 +968,13 @@ h1, h2, h3, .display { font-family: var(--display); }
     <!-- Page hero -->
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">The Process</p>
         <h2>How It Works</h2>
-        <p>Here's exactly what working together looks like &mdash; from our first hello to the final walkthrough. It's calm, collaborative, and always moves at your pace.</p>
-        <a class="btn btn-lg" href="schedule.html">Discuss Your Project</a>
+        <p>Here are the steps we'll follow, from first call to organized space.</p>
       </div>
     </section>
 
     <!-- Process steps -->
-    <section class="section">
+    <section class="section" style="padding-top: 8px;">
       <div class="container">
         <div class="process">
 
@@ -972,8 +982,10 @@ h1, h2, h3, .display { font-family: var(--display); }
             <div class="step-num">1</div>
             <div class="step-body">
               <h3>Free Consultation</h3>
-              <p class="step-sub">A relaxed 20-minute call over Google Meet</p>
-              <p>We'll chat about your space, what's working (and what's not), and what you're hoping to accomplish. I'll explain how I work, answer any questions, and make sure we're a good fit before moving forward.</p>
+              <p class="step-sub">20-minute Call over Google Meet</p>
+              <p>We'll discuss your space, what's working, what's not, and what you're hoping to accomplish. I'll explain how I work and answer any questions.</p>
+              <p>By the end, you'll have a clear sense of how we'd work together and what's possible for your space, with no pressure to commit.</p>
+              <div style="margin-top: 16px;"><a class="btn" href="schedule.html">Book a Free Consult</a></div>
             </div>
           </div>
 
@@ -981,8 +993,8 @@ h1, h2, h3, .display { font-family: var(--display); }
             <div class="step-num">2</div>
             <div class="step-body">
               <h3>Understand Your Space</h3>
-              <p class="step-sub">An in-home walkthrough, together</p>
-              <p>When we meet in your home, we'll walk through the space together and I'll ask lots of questions about how you use it. I want to understand your routines, your biggest pain points, and what's getting in your way &mdash; so I can create a system that's intuitive, easy to maintain, and built around the way you live.</p>
+              <p>When we meet in your home, we'll walk through the space together and I'll ask lots of questions about how you use it.</p>
+              <p>I want to understand your routines, your biggest pain points, and what's getting in your way. With this information, I can create a system that's intuitive, easy to maintain, and built around the way you live.</p>
             </div>
           </div>
 
@@ -990,16 +1002,16 @@ h1, h2, h3, .display { font-family: var(--display); }
             <div class="step-num">3</div>
             <div class="step-body">
               <h3>Sort &amp; Declutter</h3>
-              <p class="step-sub">Everything out in the open</p>
-              <p>We'll group similar items together so we can see exactly what you have. Then we'll decide what to:</p>
-              <div class="decision-tags">
-                <span class="decision-tag">Keep</span>
-                <span class="decision-tag">Donate</span>
-                <span class="decision-tag">Relocate</span>
-                <span class="decision-tag">Recycle</span>
-                <span class="decision-tag clay">Toss</span>
-              </div>
-              <p class="step-note">You'll always make the final decisions about your belongings.</p>
+              <p>We'll group similar items together into categories so we can see exactly what you have.</p>
+              <p>Then we'll decide what to:</p>
+              <ul class="step-list">
+                <li>Keep</li>
+                <li>Donate</li>
+                <li>Relocate</li>
+                <li>Recycle</li>
+                <li>Toss</li>
+              </ul>
+              <p>You'll always make the final call on your belongings.</p>
             </div>
           </div>
 
@@ -1007,26 +1019,28 @@ h1, h2, h3, .display { font-family: var(--display); }
             <div class="step-num">4</div>
             <div class="step-body">
               <h3>Design Your System</h3>
-              <p class="step-sub">A layout that fits your life</p>
-              <p>Once we know what's staying, I'll design a layout that makes sense for your home and your routines. Frequently used items stay easy to reach, occasional-use items get stored appropriately, and everything gets an intentional home.</p>
+              <p>Once we know what's staying, I'll design a layout that makes sense for your home and your routines.</p>
+              <p>Frequently used items stay within easy reach.<br>
+              Occasional-use items get stored thoughtfully.<br>
+              Everything gets an intentional home.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-num">5</div>
             <div class="step-body">
-              <h3>Product Sourcing <span class="opt">(if needed)</span></h3>
-              <p class="step-sub">Only what you actually need</p>
-              <p>Only after we've decluttered do I recommend organizing products. I'll take measurements, research the best options, and send you a simple shopping list for approval. Once approved, I can purchase everything for you &mdash; so you don't have to.</p>
+              <h3>Product Sourcing (if needed)</h3>
+              <p>Only after we've decluttered do I recommend organizing products.</p>
+              <p>I'll take measurements, research the best options, and send you a simple shopping list for approval. Once approved, I can purchase everything for you so you don't have to.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-num">6</div>
             <div class="step-body">
-              <h3>Bring It All Together</h3>
-              <p class="step-sub">Where it all comes to life</p>
-              <p>I'll organize everything into its new home using simple, functional systems that are easy to maintain &mdash; not just nice to look at. Labels are added whenever they'll make life easier for you or your family.</p>
+              <h3>Put Everything in Place</h3>
+              <p>I'll organize everything into its new home using simple, functional systems.</p>
+              <p>Labels are added whenever they'll make life easier for you or your family.</p>
             </div>
           </div>
 
@@ -1034,23 +1048,62 @@ h1, h2, h3, .display { font-family: var(--display); }
             <div class="step-num">7</div>
             <div class="step-body">
               <h3>Final Walkthrough</h3>
-              <p class="step-sub">So you feel confident on your own</p>
-              <p>We'll go through the finished space together, make any adjustments, and I'll show you how everything works &mdash; so you feel confident keeping it up long after I've gone.</p>
+              <p>We'll walk through the finished space together and make any final adjustments. I'll show you where everything lives, so you feel confident keeping it up long after our session ends.</p>
             </div>
           </div>
 
         </div>
       </div>
     </section>
-
-    <!-- CTA -->
+    <!-- FAQs -->
     <section class="section section-alt">
-      <div class="cta-block">
-        <h3>Ready to get started?</h3>
-        <p>Book a free 20-minute consult and let's talk about the space that's been on your mind.</p>
-        <div class="btn-row">
-          <a class="btn btn-lg" href="schedule.html">Discuss Your Project</a>
-          <a class="btn btn-ghost btn-lg" href="gallery.html">Browse the Gallery</a>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq">
+
+          <div class="faq-item">
+            <h3 class="faq-q">How much does it cost?</h3>
+            <div class="faq-a">
+              <p>I offer full-day, 6-hour sessions and charge $80/hour.</p>
+              <p>If we decide your space needs organizing products and I purchase them for you, you'll reimburse me for the cost of the products, plus any transportation costs.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">What areas do you serve?</h3>
+            <div class="faq-a">
+              <p>I'm based in Prospect Heights, Brooklyn and primarily work with clients throughout Brooklyn and nearby neighborhoods in Manhattan and Queens.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">Do I need to be there the whole time?</h3>
+            <div class="faq-a">
+              <p>Not the whole time, but I will need your input throughout the project.</p>
+              <p>We'll work together to decide what to keep, design your new system, and review any product recommendations. In between, many clients choose to work from home, take meetings, run errands, or spend time with their family while I continue organizing.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">Do you work with what I already have?</h3>
+            <div class="faq-a">
+              <p>Absolutely.</p>
+              <p>Buying containers is never the goal. Creating a system that works for you is.</p>
+              <p>I'll always start by using the containers, baskets, furniture, and other organizing products you already own. If your space would benefit from something new, I'll recommend it, but only if it makes your space more functional. The decision is always yours.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">What if my space needs new organizing products?</h3>
+            <div class="faq-a">
+              <p>I don't purchase organizing products before our first session.</p>
+              <p>We'll first sort through everything and create a plan for your space. Then I'll take measurements, research the right options, and create a list of product recommendations.</p>
+              <p>From there, you can order the products yourself, or I can purchase them on your behalf.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
