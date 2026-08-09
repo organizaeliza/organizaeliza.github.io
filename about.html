@@ -845,6 +845,20 @@ h1, h2, h3, .display { font-family: var(--display); }
   .nav-toggle { display: block; }
 }
 
+/* ---- About prose + pull quote ---- */
+.prose { max-width: 720px; margin: 0 auto; }
+.prose p { color: var(--text-secondary); font-size: 16px; line-height: 1.85; margin-bottom: 16px; }
+.prose p:last-child { margin-bottom: 0; }
+.pull-quote { max-width: 760px; margin: 0 auto; text-align: center; font-family: var(--display); font-size: 30px; font-weight: 500; font-style: italic; line-height: 1.35; color: var(--accent-deep); }
+@media (max-width: 640px) { .pull-quote { font-size: 24px; } }
+
+/* ---- About story ---- */
+.about-portrait { max-width: 400px; margin: 0 auto 44px; }
+.about-story { max-width: 720px; margin: 0 auto; }
+.about-story p { color: var(--text-secondary); font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
+.about-story p:last-child { margin-bottom: 0; }
+.about-story strong { color: var(--text); font-weight: 700; }
+
 </style>
 </head>
 <body>
@@ -875,19 +889,15 @@ h1, h2, h3, .display { font-family: var(--display); }
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">About</p>
-        <h2>Hi, I'm Eliza</h2>
-        <p>
-          I help busy households turn overwhelming, cluttered spaces into calm rooms
-          that actually work — without the shame, and without a system you'll abandon in a week.
-        </p>
+        <h2>Meet Eliza</h2>
       </div>
     </section>
 
-    <!-- Bio split -->
-    <section class="section" style="padding-top: 20px;">
-      <div class="container split">
-        <div class="bio-card">
-          <div class="bio-image">
+    <!-- Story -->
+    <section class="section" style="padding-top: 12px;">
+      <div class="container">
+        <div class="about-portrait">
+          <div class="image-frame" style="aspect-ratio: 4 / 5;">
             <img src="eliza.jpg" alt="Eliza, professional home organizer"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="image-placeholder" style="display:none;">
@@ -895,73 +905,25 @@ h1, h2, h3, .display { font-family: var(--display); }
               <p>Add Eliza's photo at<br><strong>eliza.jpg</strong></p>
             </div>
           </div>
-          <div class="bio-info">
-            <h3>Eliza</h3>
-            <div class="bio-role">Founder &amp; Lead Organizer</div>
-            <p class="bio-text">
-              Certified professional organizer, lifelong list-maker, and firm believer that
-              a tidy space makes room for a calmer mind.
-            </p>
-          </div>
         </div>
 
-        <div>
-          <p class="eyebrow">My Story</p>
-          <h2 class="section-title">Organizing found me</h2>
-          <p style="color: var(--text-secondary); font-size: 15.5px; line-height: 1.8; margin-bottom: 14px;">
-            I started organizing for friends and family years ago, and quickly realized it
-            was more than just tidying — it was helping people feel lighter in their own homes.
-            After turning that passion into a full-time studio, I've spent the last several years
-            helping families reclaim their closets, kitchens, offices, and sanity.
-          </p>
-          <p style="color: var(--text-secondary); font-size: 15.5px; line-height: 1.8;">
-            My approach is warm and completely judgment-free. Clutter isn't a character flaw —
-            it's just a system that stopped serving you. Together we'll build one that fits your
-            real, busy, wonderful life.
-          </p>
-          <div class="row" style="margin-top: 26px;">
-            <a class="btn" href="schedule.html">Work With Me</a>
+        <div class="about-story">
+          <p><strong>Organizing has been the quiet thread running through my whole life, long before I thought to call it that.</strong></p>
+          <p>As the oldest daughter, I used to sort my little brother's Legos by category so he could always find the exact piece for his next castle, spaceship, or Batman car. When I started doing this professionally, the people who know me best all said the same thing: "That is so you."</p>
+          <p>For a while, though, I looked for my purpose elsewhere.</p>
+          <p>I studied environmental studies, where I became fascinated by how much our society consumes and the value of making the most of what we already have. I wanted to make a real difference. I just didn't know what that looked like yet.</p>
+          <p>After college, I worked at a tech startup in Boston. My favorite project wasn't the one I was hired for. It was organizing our scattered sales and marketing materials into a system that would serve the team long after I was gone.</p>
+          <p><strong>That's when everything clicked.</strong></p>
+          <p>I realized I didn't just enjoy organizing. I loved building systems that make people's lives easier.</p>
+          <p><strong>Home organizing is where everything I care about comes together:</strong> solving problems, working closely with people, and creating thoughtful systems that last. Instead of making a distant, abstract impact, I get to see it up close, in a real home, on someone's face.</p>
+          <p>I moved to Prospect Heights with my partner last winter, and living in New York has only reinforced what I've always believed. When space is limited, every square foot matters. A thoughtfully organized home isn't a luxury. It's what makes a busy life feel manageable.</p>
+          <p>My goal isn't to create a picture-perfect home.</p>
+          <p>It's to create one that works in the background, so you can spend less time looking for things, moving things, and thinking about things, and more time living your life.</p>
+          <p>More than an organized home, I hope to leave you with a little more peace.</p>
+          <p><strong>A home you can exhale in.</strong></p>
+          <div class="row" style="justify-content: center; margin-top: 32px;">
+            <a class="btn btn-lg" href="schedule.html">Book a Free Consult</a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Philosophy -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <p class="eyebrow">What I Believe</p>
-          <h2 class="section-title">My organizing philosophy</h2>
-        </div>
-
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-icon">&#127793;</div>
-            <h3>Function First</h3>
-            <p>Pretty is nice, but a system only works if it fits how you actually live. Function leads, beauty follows.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon clay">&#129496;</div>
-            <h3>No Judgment</h3>
-            <p>Every home is a work in progress. I meet you exactly where you are — no lectures, no shame, just help.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">&#9851;&#65039;</div>
-            <h3>Less, Thoughtfully</h3>
-            <p>We keep what you love and use, donate the rest responsibly, and make space for what matters.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section">
-      <div class="cta-block">
-        <h3>Let's make your home feel like a deep breath</h3>
-        <p>Book a free consult and tell me about the space that's been on your mind.</p>
-        <div class="btn-row">
-          <a class="btn btn-lg" href="schedule.html">Book a Consult</a>
-          <a class="btn btn-ghost btn-lg" href="services.html">See Services</a>
         </div>
       </div>
     </section>
