@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 100" role="img" aria-label="Organiza Eliza E-mark">
+  <defs>
+    <mask id="emCuts">
+      <rect x="0" y="0" width="128" height="100" fill="#fff"/>
+      <!-- four capsule cuts: rounded inner ends, flush at the outer edges -->
+      <rect x="-24" y="20.5" width="67" height="18" rx="9" fill="#000"/>
+      <rect x="85"  y="20.5" width="67" height="18" rx="9" fill="#000"/>
+      <rect x="-24" y="61.5" width="67" height="18" rx="9" fill="#000"/>
+      <rect x="85"  y="61.5" width="67" height="18" rx="9" fill="#000"/>
+    </mask>
+  </defs>
+  <rect x="0" y="0" width="128" height="100" fill="#AC461E" mask="url(#emCuts)"/>
+</svg>
