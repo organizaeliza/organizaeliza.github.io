@@ -7,7 +7,7 @@
   <meta name="description" content="How it works, step by step: from a free consultation to the final walkthrough. A calm, collaborative home-organizing process built around the way you live.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400..700;1,400..700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
 /* ========================================
    Organiza Eliza — Home Organizing Studio
@@ -18,27 +18,27 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #faf6ef;
-  --surface: #f3ede2;
+  --bg: #efebe8;
+  --surface: #e7e1da;
   --card: #ffffff;
-  --card-hover: #fffdf9;
-  --text: #2e2a24;
-  --text-secondary: #7a7264;
-  --accent: #7c8a6f;          /* sage */
-  --accent-deep: #5f6d54;
-  --accent-glow: rgba(124, 138, 111, 0.12);
-  --accent-border: rgba(124, 138, 111, 0.35);
-  --clay: #c08457;            /* warm terracotta */
-  --clay-glow: rgba(192, 132, 87, 0.12);
-  --border: rgba(46, 42, 36, 0.10);
-  --border-hover: rgba(46, 42, 36, 0.20);
-  --shadow: 0 10px 30px rgba(46, 42, 36, 0.06);
-  --shadow-lg: 0 18px 50px rgba(46, 42, 36, 0.10);
+  --card-hover: #fcfbf9;
+  --text: #63603d;
+  --text-secondary: #6a6743;
+  --accent: #63603d;          /* ember */
+  --accent-deep: #63603d;
+  --accent-glow: rgba(99, 96, 61, 0.12);
+  --accent-border: rgba(99, 96, 61, 0.35);
+  --clay: #63603d;            /* fern */
+  --clay-glow: rgba(99, 96, 61, 0.12);
+  --border: rgba(35, 52, 75, 0.10);
+  --border-hover: rgba(35, 52, 75, 0.20);
+  --shadow: 0 10px 30px rgba(35, 52, 75, 0.06);
+  --shadow-lg: 0 18px 50px rgba(35, 52, 75, 0.10);
   --radius: 18px;
   --radius-sm: 12px;
   --radius-full: 999px;
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -70,7 +70,7 @@ h1, h2, h3, .display { font-family: var(--display); }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 246, 239, 0.82);
+  background: rgba(239, 235, 232, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -132,7 +132,7 @@ h1, h2, h3, .display { font-family: var(--display); }
 
 .nav-link:hover {
   color: var(--text);
-  background: rgba(46, 42, 36, 0.04);
+  background: rgba(35, 52, 75, 0.04);
 }
 
 .nav-link.active {
@@ -193,7 +193,7 @@ h1, h2, h3, .display { font-family: var(--display); }
 }
 
 .btn-ghost:hover {
-  background: rgba(46, 42, 36, 0.04);
+  background: rgba(35, 52, 75, 0.04);
   border-color: var(--text-secondary);
   box-shadow: none;
 }
@@ -207,7 +207,7 @@ h1, h2, h3, .display { font-family: var(--display); }
 .section { padding: 72px 0; }
 
 .section-alt {
-  background: var(--surface);
+  background: var(--bg);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -254,7 +254,7 @@ h1, h2, h3, .display { font-family: var(--display); }
   right: -10%;
   width: 620px;
   height: 620px;
-  background: radial-gradient(circle, rgba(124, 138, 111, 0.10) 0%, transparent 68%);
+  background: radial-gradient(circle, rgba(99, 96, 61, 0.16) 0%, transparent 68%);
   pointer-events: none;
 }
 
@@ -332,7 +332,7 @@ h1, h2, h3, .display { font-family: var(--display); }
   padding: 24px;
   gap: 8px;
   background:
-    linear-gradient(135deg, rgba(124,138,111,0.10), rgba(192,132,87,0.08));
+    linear-gradient(135deg, rgba(99,96,61,0.10), rgba(99,96,61,0.08));
 }
 
 .image-placeholder .icon { font-size: 30px; opacity: 0.55; }
@@ -373,7 +373,7 @@ h1, h2, h3, .display { font-family: var(--display); }
 
 .card-icon.clay {
   background: var(--clay-glow);
-  border-color: rgba(192, 132, 87, 0.3);
+  border-color: rgba(99, 96, 61, 0.3);
 }
 
 .card h3 { font-size: 21px; font-weight: 500; margin-bottom: 8px; }
@@ -557,7 +557,7 @@ h1, h2, h3, .display { font-family: var(--display); }
   position: absolute;
   inset: auto 0 0 0;
   padding: 40px 18px 16px;
-  background: linear-gradient(to top, rgba(46,42,36,0.72), transparent);
+  background: linear-gradient(to top, rgba(99,96,61,0.72), transparent);
   color: #fff;
   opacity: 0;
   transition: var(--transition);
@@ -577,7 +577,7 @@ h1, h2, h3, .display { font-family: var(--display); }
   text-align: center;
   padding: 20px;
   color: var(--text-secondary);
-  background: linear-gradient(135deg, rgba(124,138,111,0.12), rgba(192,132,87,0.10));
+  background: linear-gradient(135deg, rgba(99,96,61,0.12), rgba(99,96,61,0.10));
 }
 .gallery-ph .icon { font-size: 26px; opacity: 0.6; }
 .gallery-ph p { font-size: 12px; opacity: 0.85; }
@@ -678,7 +678,7 @@ h1, h2, h3, .display { font-family: var(--display); }
   text-align: center;
   padding: 48px;
   gap: 14px;
-  background: linear-gradient(135deg, rgba(124,138,111,0.07), rgba(192,132,87,0.06));
+  background: linear-gradient(135deg, rgba(99,96,61,0.07), rgba(99,96,61,0.06));
 }
 
 .embed-placeholder .embed-icon { font-size: 46px; opacity: 0.5; }
@@ -845,15 +845,15 @@ h1, h2, h3, .display { font-family: var(--display); }
   top: 66px;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(var(--accent-border), rgba(124,138,111,0.08));
+  background: linear-gradient(rgba(99,96,61,0.85), rgba(99,96,61,0.12));
 }
 .step:last-child::before { display: none; }
 .step-num {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
-  color: #fff;
+  background: var(--fern);
+  color: var(--cream);
   font-family: var(--display);
   font-size: 24px;
   font-weight: 600;
@@ -888,7 +888,7 @@ h1, h2, h3, .display { font-family: var(--display); }
 }
 .decision-tag.clay {
   background: var(--clay-glow);
-  border-color: rgba(192,132,87,0.32);
+  border-color: rgba(99,96,61,0.32);
   color: #a5673d;
 }
 .step-note {
@@ -936,6 +936,134 @@ h1, h2, h3, .display { font-family: var(--display); }
 .faq-a p { margin-bottom: 10px; }
 .faq-a p:last-child { margin-bottom: 0; }
 
+/* ===== 70s system (Midnight / Fern / Cream) ===== */
+:root{ --ember:#63603d; --sand:#63603d; --stone:#63603d; --fern:#63603d; --midnight:#63603d; --cream:#efebe8; }
+body{ background:var(--cream); color:var(--midnight); }
+body::after{ content:''; position:fixed; inset:0; pointer-events:none; z-index:9998; opacity:0.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+h1,h2,h3,.hero-title,.section-title,.page-hero h2,.cta-block h3,.brand-text h1,.footer-brand h4,.service-name,.faq-q,.review-name,.step-body h3{ font-weight:800; letter-spacing:-0.02em; }
+.section-title{ font-size:42px; }
+.page-hero h2{ font-size:50px; }
+.eyebrow{ font-weight:800; letter-spacing:0.2em; color:var(--fern); }
+.btn{ background:var(--fern); color:var(--cream); border-color:var(--fern); font-weight:700; }
+.btn:hover{ background:var(--midnight); border-color:var(--midnight); color:var(--cream); box-shadow:none; }
+.btn-ghost{ background:transparent; color:var(--midnight); border-color:var(--midnight); }
+.btn-ghost:hover{ background:var(--midnight); color:var(--cream); border-color:var(--midnight); }
+.section-alt{ border:none; background:var(--cream); }
+.brand-logo{ border-radius:14px; background:var(--fern); color:var(--cream); }
+
+.blk-midnight{ background:var(--midnight); color:var(--cream); }
+.blk-fern{ background:var(--fern); color:var(--cream); }
+.blk-midnight :is(h1,h2,h3,h4,.section-title,.service-name,.faq-q,.cta-block h3,.step-body h3),
+.blk-fern :is(h1,h2,h3,h4,.section-title,.service-name,.faq-q,.cta-block h3,.step-body h3){ color:var(--cream); }
+.blk-midnight :is(p,li,.section-subtitle,.service-desc,.faq-a),
+.blk-fern :is(p,li,.section-subtitle,.service-desc,.faq-a){ color:rgba(239,235,232,0.86); }
+.blk-midnight .eyebrow,.blk-fern .eyebrow{ color:var(--cream); }
+.blk-midnight :is(.service-item,.faq-item),.blk-fern :is(.service-item,.faq-item){ border-top-color:rgba(239,235,232,0.22); }
+.blk-midnight .room-list li::before,.blk-fern .room-list li::before{ color:var(--cream); }
+.blk-midnight .btn,.blk-fern .btn{ background:var(--cream); color:var(--midnight); border-color:var(--cream); }
+.blk-midnight .btn:hover,.blk-fern .btn:hover{ background:var(--midnight); color:var(--cream); border-color:var(--midnight); }
+.blk-midnight .btn-ghost,.blk-fern .btn-ghost{ background:transparent; color:var(--cream); border-color:rgba(239,235,232,0.6); }
+.blk-stone{ background:var(--stone); color:var(--midnight); }
+.blk-stone :is(h1,h2,h3,h4,.section-title,.faq-q,.cta-block h3,.step-body h3){ color:var(--midnight); }
+.blk-stone :is(p,li,.section-subtitle,.faq-a){ color:rgba(99,96,61,0.82); }
+.blk-stone .eyebrow{ color:var(--fern); }
+.blk-stone :is(.service-item,.faq-item){ border-top-color:rgba(99,96,61,0.18); }
+
+.site-footer{ background:var(--cream); border-top:1px solid rgba(99,96,61,0.18); }
+.footer-brand h4{ color:var(--fern); }
+.footer-brand p{ color:var(--text-secondary); }
+.footer-inner{ color:var(--text-secondary); border-top-color:rgba(99,96,61,0.14); }
+.site-footer .nav-link{ color:var(--text-secondary); }
+.site-footer .nav-link:hover{ color:var(--fern); background:rgba(99,96,61,0.06); }
+
+@media (max-width:900px){ .section-title{ font-size:32px; } .page-hero h2{ font-size:36px; } }
+
+
+
+/* ============================================================
+   TYPOGRAPHY SYSTEM — Windsor (Fraunces) + Univers (Inter)
+   Warm, editorial, 1970s modernist. Applied identically sitewide.
+   ============================================================ */
+:root{
+  --font: 'Helvetica Neue', Helvetica, 'Archivo', Arial, sans-serif;     /* Univers */
+  --display: 'Crimson Pro', Georgia, 'Times New Roman', serif; /* Windsor */
+}
+body{ font-family: var(--font); font-weight: 400; line-height: 1.6; letter-spacing: 0; }
+
+/* --- Windsor: reserved for H1/H2 display + the wordmark only --- */
+.hero-title, .section-title, .page-hero h2, .brand-text h1{
+  font-family: var(--display);
+  font-weight: 600;
+  font-optical-sizing: auto;
+  letter-spacing: -0.006em;
+  line-height: 1.04;
+}
+.hero-title{ line-height: 0.98; letter-spacing: -0.012em; }
+.section-title, .page-hero h2{ line-height: 1.05; }
+.hero-title .highlight{ font-style: italic; }
+.brand-text h1{ font-size: 21px; font-weight: 600; letter-spacing: -0.01em; line-height: 1; }
+
+/* --- Univers: subheads and all secondary headings --- */
+h3, h4, .card h3, .cta-block h3, .step-body h3, .faq-q, .service-name,
+.review-name, .footer-brand h4, .stat .num, .embed-placeholder h4,
+.bio-info h3, .reviews-badge, .embed-placeholder h4{
+  font-family: var(--font);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+/* --- Univers: body copy --- */
+p, li, .hero-text, .section-subtitle, .service-desc, .faq-a, .step-body p,
+.review-text, .page-hero p, .bio-text, .info-content p{
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* --- Univers medium: nav + buttons --- */
+.nav-link, .btn, .btn-lg{ font-family: var(--font); font-weight: 500; letter-spacing: 0.005em; }
+
+/* --- Univers: small all-caps labels (subtle tracking) --- */
+.eyebrow, .embed-label, .bio-role, .step-sub, .brand-text p{
+  font-family: var(--font);
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+/* --- Narrow, readable measure --- */
+.hero-text{ max-width: 46ch; }
+.section-subtitle{ max-width: 52ch; }
+.page-hero p{ max-width: 52ch; }
+.about-story{ max-width: 60ch; margin-left: auto; margin-right: auto; }
+
+/* --- Consistent spacing system (generous but connected) --- */
+.section{ padding: 96px 0; }
+.hero{ padding: 96px 0 88px; }
+.page-hero{ padding: 96px 0 12px; }
+.section-header{ margin-bottom: 50px; }
+.hero-title{ margin-bottom: 22px; }
+.section-title{ margin-bottom: 16px; }
+.page-hero h2{ margin-bottom: 16px; }
+.section-subtitle{ margin-bottom: 0; }
+.hero-text{ margin-bottom: 32px; }
+.cta-block h3{ margin-bottom: 14px; }
+
+/* --- Mobile: same hierarchy, smaller headings --- */
+@media (max-width: 900px){
+  .hero-title{ font-size: 42px; }
+  .section-title{ font-size: 32px; }
+  .page-hero h2{ font-size: 34px; }
+  .section{ padding: 62px 0; }
+  .hero{ padding: 60px 0 52px; }
+  .page-hero{ padding: 66px 0 12px; }
+  .section-header{ margin-bottom: 36px; }
+}
+/* ==================== end typography system ==================== */
+
 </style>
 </head>
 <body>
@@ -947,7 +1075,6 @@ h1, h2, h3, .display { font-family: var(--display); }
         <div class="brand-logo">OE</div>
         <div class="brand-text">
           <h1>Organiza Eliza</h1>
-          <p>Home Organizing Studio</p>
         </div>
       </a>
 
@@ -956,6 +1083,7 @@ h1, h2, h3, .display { font-family: var(--display); }
       <nav class="nav" id="navMenu">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
         <a class="nav-link active" href="how-it-works.html">How It Works</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link nav-cta" href="schedule.html">Book Now</a>
@@ -1055,7 +1183,7 @@ h1, h2, h3, .display { font-family: var(--display); }
       </div>
     </section>
     <!-- FAQs -->
-    <section class="section section-alt">
+    <section class="section blk-fern">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Frequently Asked Questions</h2>
@@ -1065,7 +1193,7 @@ h1, h2, h3, .display { font-family: var(--display); }
           <div class="faq-item">
             <h3 class="faq-q">How much does it cost?</h3>
             <div class="faq-a">
-              <p>I offer full-day, 6-hour sessions and charge $80/hour.</p>
+              <p>I offer full-day, 6-hour sessions and charge $85/hour.</p>
               <p>If we decide your space needs organizing products and I purchase them for you, you'll reimburse me for the cost of the products, plus any transportation costs.</p>
             </div>
           </div>
@@ -1114,11 +1242,12 @@ h1, h2, h3, .display { font-family: var(--display); }
       <div class="footer-top">
         <div class="footer-brand">
           <h4>Organiza Eliza</h4>
-          <p>Calm, functional, beautiful spaces — one room at a time.</p>
+          <p>Home organization for real life.</p>
         </div>
         <div class="row gap-sm">
           <a class="nav-link" href="index.html">Home</a>
           <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
           <a class="nav-link" href="how-it-works.html">How It Works</a>
           <a class="nav-link" href="about.html">About</a>
           <a class="nav-link" href="schedule.html">Book Now</a>
@@ -1126,7 +1255,7 @@ h1, h2, h3, .display { font-family: var(--display); }
       </div>
       <div class="footer-inner">
         <p>&copy; 2026 Organiza Eliza. All rights reserved.</p>
-        <p>hello@organizaeliza.com</p>
+        <p>eliza@organizaeliza.com</p>
       </div>
     </div>
   </footer>
@@ -1219,7 +1348,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const note = document.getElementById('formNote');
       if (!name.value.trim() || !email.value.trim()) {
         note.style.display = 'block';
-        note.style.color = '#b4552f';
+        note.style.color = '#63603d';
         note.textContent = 'Please add your name and email so I can reach you.';
         return;
       }
