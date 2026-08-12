@@ -1054,6 +1054,36 @@ p, li, .hero-text, .section-subtitle, .service-desc, .faq-a, .step-body p,
 }
 /* ==================== end typography system ==================== */
 
+
+/* ===================== Palette: fern + cream only ===================== */
+/* Headings + body in the warm fern voice */
+.hero-title, .section-title, .page-hero h2, .cta-block h3, .brand-text h1, .footer-brand h4{ color:var(--fern); }
+.hero-title .highlight{ color:var(--fern); }
+p, li, .hero-text, .section-subtitle, .service-desc, .faq-a, .step-body p, .review-text, .page-hero p, .bio-text, .about-story p, .info-content p{ color:rgba(99,96,61,0.95); }
+.about-story strong{ color:var(--fern); }
+.nav-link{ color:rgba(99,96,61,0.82); }
+.footer-brand p, .footer-inner{ color:rgba(99,96,61,0.8); }
+.site-footer .nav-link{ color:rgba(99,96,61,0.82); }
+.eyebrow, .embed-label, .bio-role, .step-sub{ color:var(--fern); }
+.btn:hover{ background:#4c4a2f; border-color:#4c4a2f; color:var(--cream); }
+/* Fern blocks stay cream on top */
+.blk-fern :is(h1,h2,h3,h4,.section-title,.cta-block h3){ color:var(--cream); }
+.blk-fern .eyebrow{ color:var(--cream); }
+.blk-fern :is(.section-subtitle,.faq-a,.faq-q){ color:rgba(239,235,232,0.86); }
+/* review cards are light cards on fern -> fern text */
+.blk-fern .review-name{ color:var(--fern); }
+.blk-fern .review-text{ color:rgba(99,96,61,0.9); }
+/* stars in fern */
+.review-stars, .blk-fern .reviews-badge .review-stars{ color:var(--fern); }
+/* How It Works timeline in fern */
+.step-num{ background:var(--fern); color:var(--cream); }
+.step::before{ background:linear-gradient(rgba(99,96,61,0.9), rgba(99,96,61,0.12)); }
+/* Gallery hover motion */
+.gallery figure{ overflow:hidden; }
+.gallery img{ transition: transform 0.55s cubic-bezier(0.2,0.7,0.2,1); }
+.gallery figure:hover img{ transform: scale(1.045); }
+/* ================================================================ */
+
 </style>
 </head>
 <body>
@@ -1100,8 +1130,8 @@ p, li, .hero-text, .section-subtitle, .service-desc, .faq-a, .step-body p,
           <p class="hero-meta">Based in Prospect Heights, Brooklyn &middot; Serving Park Slope &amp; nearby Brooklyn &middot; From $85/hour</p>
         </div>
 
-        <div class="image-frame">
-          <img src="hero.jpg" alt="An organized kitchen counter with labeled canisters of grains, nuts and seeds"
+        <div class="image-frame" style="border-radius:0;">
+          <img src="hero.jpg" alt="Styled, organized built-in bookshelves in a Brooklyn home"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="image-placeholder" style="display:none;">
             <div class="icon">&#127968;</div>
@@ -1249,9 +1279,9 @@ p, li, .hero-text, .section-subtitle, .service-desc, .faq-a, .step-body p,
           <h2 class="section-title">A few recent projects</h2>
         </div>
         <div class="gallery">
-          <figure class="g-third"><img src="gallery-books.jpg" alt="Children's books and journals sorted into labeled bins"></figure>
-          <figure class="g-third"><img src="gallery-kids.jpg" alt="Kids' clothes drawer with dividers and labels"></figure>
           <figure class="g-third"><img src="gallery-spices.jpg" alt="Organized spice drawer with labeled jars"></figure>
+          <figure class="g-third"><img src="gallery-wardrobe.jpg" alt="Children's wardrobe with labeled bins and hanging clothes"></figure>
+          <figure class="g-third"><img src="gallery-basement.jpg" alt="Labeled storage totes in a brownstone basement"></figure>
         </div>
         <div style="text-align:center; margin-top: 36px;">
           <a class="btn btn-ghost" href="gallery.html">See more projects</a>

@@ -1064,6 +1064,36 @@ p, li, .hero-text, .section-subtitle, .service-desc, .faq-a, .step-body p,
 }
 /* ==================== end typography system ==================== */
 
+
+/* ===================== Palette: fern + cream only ===================== */
+/* Headings + body in the warm fern voice */
+.hero-title, .section-title, .page-hero h2, .cta-block h3, .brand-text h1, .footer-brand h4{ color:var(--fern); }
+.hero-title .highlight{ color:var(--fern); }
+p, li, .hero-text, .section-subtitle, .service-desc, .faq-a, .step-body p, .review-text, .page-hero p, .bio-text, .about-story p, .info-content p{ color:rgba(99,96,61,0.95); }
+.about-story strong{ color:var(--fern); }
+.nav-link{ color:rgba(99,96,61,0.82); }
+.footer-brand p, .footer-inner{ color:rgba(99,96,61,0.8); }
+.site-footer .nav-link{ color:rgba(99,96,61,0.82); }
+.eyebrow, .embed-label, .bio-role, .step-sub{ color:var(--fern); }
+.btn:hover{ background:#4c4a2f; border-color:#4c4a2f; color:var(--cream); }
+/* Fern blocks stay cream on top */
+.blk-fern :is(h1,h2,h3,h4,.section-title,.cta-block h3){ color:var(--cream); }
+.blk-fern .eyebrow{ color:var(--cream); }
+.blk-fern :is(.section-subtitle,.faq-a,.faq-q){ color:rgba(239,235,232,0.86); }
+/* review cards are light cards on fern -> fern text */
+.blk-fern .review-name{ color:var(--fern); }
+.blk-fern .review-text{ color:rgba(99,96,61,0.9); }
+/* stars in fern */
+.review-stars, .blk-fern .reviews-badge .review-stars{ color:var(--fern); }
+/* How It Works timeline in fern */
+.step-num{ background:var(--fern); color:var(--cream); }
+.step::before{ background:linear-gradient(rgba(99,96,61,0.9), rgba(99,96,61,0.12)); }
+/* Gallery hover motion */
+.gallery figure{ overflow:hidden; }
+.gallery img{ transition: transform 0.55s cubic-bezier(0.2,0.7,0.2,1); }
+.gallery figure:hover img{ transform: scale(1.045); }
+/* ================================================================ */
+
 </style>
 </head>
 <body>

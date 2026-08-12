@@ -862,14 +862,12 @@ h1, h2, h3, .display { font-family: var(--display); }
 @media (max-width: 420px) { .room-list { grid-template-columns: 1fr; } }
 .service-note { max-width: 720px; margin: 40px auto 0; padding-top: 26px; border-top: 1px solid rgba(239,235,232,0.22); font-size: 15px; line-height: 1.6; color: rgba(239,235,232,0.9); }
 
-/* ---- Project gallery (varied sizes, natural shapes) ---- */
-.gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; max-width: 1060px; margin: 0 auto; align-items: start; }
-.gallery figure { margin: 0; }
-.gallery img { display: block; width: 100%; height: auto; }
-.gallery .g-full { grid-column: span 12; }
-.gallery .g-half { grid-column: span 6; }
-@media (max-width: 820px) { .gallery { grid-template-columns: repeat(2, 1fr); gap: 14px; } .gallery .g-full { grid-column: span 2; } .gallery .g-half { grid-column: span 1; } }
-@media (max-width: 520px) { .gallery { grid-template-columns: 1fr; } .gallery .g-full, .gallery .g-half { grid-column: span 1; } }
+/* ---- Project gallery (uniform size — justified rows, natural shapes) ---- */
+.gallery { display: flex; flex-wrap: wrap; gap: 16px; max-width: 1100px; margin: 0 auto; }
+.gallery figure { margin: 0; height: 270px; flex-grow: 1; overflow: hidden; position: relative; }
+.gallery img { max-height: 100%; min-width: 100%; object-fit: cover; display: block; vertical-align: bottom; }
+@media (max-width: 820px) { .gallery { gap: 12px; } .gallery figure { height: 210px; } }
+@media (max-width: 520px) { .gallery { display: block; } .gallery figure { height: auto; margin-bottom: 12px; } .gallery img { width: 100%; height: auto; max-height: none; min-width: 0; } }
 
 /* ===== 70s system (Midnight / Fern / Cream) ===== */
 :root{ --ember:#63603d; --sand:#63603d; --stone:#63603d; --fern:#63603d; --midnight:#63603d; --cream:#efebe8; }
@@ -992,6 +990,36 @@ p, li, .hero-text, .section-subtitle, .service-desc, .faq-a, .step-body p,
   .section-header{ margin-bottom: 36px; }
 }
 /* ==================== end typography system ==================== */
+
+
+/* ===================== Palette: fern + cream only ===================== */
+/* Headings + body in the warm fern voice */
+.hero-title, .section-title, .page-hero h2, .cta-block h3, .brand-text h1, .footer-brand h4{ color:var(--fern); }
+.hero-title .highlight{ color:var(--fern); }
+p, li, .hero-text, .section-subtitle, .service-desc, .faq-a, .step-body p, .review-text, .page-hero p, .bio-text, .about-story p, .info-content p{ color:rgba(99,96,61,0.95); }
+.about-story strong{ color:var(--fern); }
+.nav-link{ color:rgba(99,96,61,0.82); }
+.footer-brand p, .footer-inner{ color:rgba(99,96,61,0.8); }
+.site-footer .nav-link{ color:rgba(99,96,61,0.82); }
+.eyebrow, .embed-label, .bio-role, .step-sub{ color:var(--fern); }
+.btn:hover{ background:#4c4a2f; border-color:#4c4a2f; color:var(--cream); }
+/* Fern blocks stay cream on top */
+.blk-fern :is(h1,h2,h3,h4,.section-title,.cta-block h3){ color:var(--cream); }
+.blk-fern .eyebrow{ color:var(--cream); }
+.blk-fern :is(.section-subtitle,.faq-a,.faq-q){ color:rgba(239,235,232,0.86); }
+/* review cards are light cards on fern -> fern text */
+.blk-fern .review-name{ color:var(--fern); }
+.blk-fern .review-text{ color:rgba(99,96,61,0.9); }
+/* stars in fern */
+.review-stars, .blk-fern .reviews-badge .review-stars{ color:var(--fern); }
+/* How It Works timeline in fern */
+.step-num{ background:var(--fern); color:var(--cream); }
+.step::before{ background:linear-gradient(rgba(99,96,61,0.9), rgba(99,96,61,0.12)); }
+/* Gallery hover motion */
+.gallery figure{ overflow:hidden; }
+.gallery img{ transition: transform 0.55s cubic-bezier(0.2,0.7,0.2,1); }
+.gallery figure:hover img{ transform: scale(1.045); }
+/* ================================================================ */
 
 </style>
 </head>
