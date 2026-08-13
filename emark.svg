@@ -9,5 +9,5 @@
       <rect x="85"  y="61.5" width="67" height="18" rx="9" fill="#000"/>
     </mask>
   </defs>
-  <rect x="0" y="0" width="128" height="100" fill="#AC461E" mask="url(#emCuts)"/>
+  <rect x="0" y="0" width="128" height="100" fill="#D39955" mask="url(#emCuts)"/>
 </svg>
