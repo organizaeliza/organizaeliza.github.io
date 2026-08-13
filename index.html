@@ -261,6 +261,13 @@ p+p{margin-top:14px}
   .sec{padding:56px 0}.sec-loose{padding:64px 0}.sec-tight{padding:40px 0}
   .svc-lead{grid-template-columns:1fr}
 }
+
+.help4{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.help4 .item{border-top:2px solid var(--charcoal);padding-top:16px}
+.help4 .item h3{font-size:18px;font-weight:600;line-height:1.25;margin-bottom:8px;color:var(--charcoal)}
+.help4 .item p{font-size:14.5px;line-height:1.5;color:rgba(18,14,7,0.72)}
+@media(max-width:820px){.help4{grid-template-columns:1fr 1fr;gap:26px 32px}}
+@media(max-width:520px){.help4{grid-template-columns:1fr;gap:22px}}
 </style>
 </head>
 <body><header class="site-header">
@@ -286,26 +293,15 @@ p+p{margin-top:14px}
   </div>
 </section>
 
-<!-- 2. WHAT I HELP WITH -->
+<!-- 2. HOW I CAN HELP -->
 <section class="sec band-sand">
   <div class="wrap">
-    <h2 class="h2" style="max-width:18ch;margin-bottom:12px">How I can help</h2>
-    <p class="lead" style="max-width:52ch;margin-bottom:38px">One space or your whole home, we&rsquo;ll start with what you want to change.</p>
-    <div class="svc-lead">
-      <div class="svc-primary">
-        <h3 class="h3" style="font-size:clamp(24px,3vw,31px);margin-bottom:12px">Whole-home organization</h3>
-        <p class="body" style="max-width:44ch;color:rgba(18,14,7,0.82)">Decluttering, organizing, and creating simple systems for every room in your home.</p>
-        <ul class="roomcols">
-          <li>Kitchens &amp; pantries</li><li>Closets &amp; wardrobes</li><li>Bedrooms</li>
-          <li>Bathrooms &amp; linens</li><li>Playrooms</li><li>Home offices</li>
-          <li>Mudrooms &amp; entryways</li><li>Laundry &amp; utility</li><li>Basements &amp; storage</li>
-        </ul>
-      </div>
-      <div class="svc-rest">
-        <div class="svc-item"><h3 class="h3">Moving support</h3><p>Packing, unpacking, and getting your new home organized from day one.</p></div>
-        <div class="svc-item"><h3 class="h3">Life transitions</h3><p>Preparing for a baby, estate cleanouts, downsizing, or helping after the loss of a loved one.</p></div>
-        <div class="svc-item"><h3 class="h3">Paper &amp; digital</h3><p>Paper filing, photos, videos, music, documents, and technology organization.</p></div>
-      </div>
+    <h2 class="h2" style="max-width:18ch;margin-bottom:30px">How I can help</h2>
+    <div class="help4">
+      <div class="item"><h3>Whole-home organization</h3><p>Decluttering and organizing for one room or your whole home.</p></div>
+      <div class="item"><h3>Moving support</h3><p>Packing, unpacking, and getting your new home set up.</p></div>
+      <div class="item"><h3>Life transitions</h3><p>Support for new babies, downsizing, estate cleanouts, and other changes.</p></div>
+      <div class="item"><h3>Paper &amp; digital</h3><p>Organizing papers, photos, files, and technology.</p></div>
     </div>
     <p style="margin-top:30px"><a class="arrow" href="services.html">See all services &rarr;</a></p>
   </div>
