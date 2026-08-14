@@ -96,7 +96,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
 
 /* header / nav */
 .site-header{position:sticky;top:0;z-index:60;background:rgba(244,244,244,0.92);
-  backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);
+  transition:box-shadow .25s ease,background-color .25s ease,border-color .25s ease}
+.site-header.scrolled{background:rgba(244,244,244,0.97);border-bottom-color:rgba(18,14,7,0.10);
+  box-shadow:0 1px 10px rgba(18,14,7,0.05)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px;
   min-height:64px;padding:10px var(--pad)}
 .brand{display:flex;align-items:center;gap:11px}
@@ -428,6 +431,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
   </div>
 </footer><script>
 document.addEventListener('DOMContentLoaded',function(){
+  /* header gains a hair of definition once you scroll */
+  var hdr=document.querySelector('.site-header');
+  if(hdr){var onScroll=function(){hdr.classList.toggle('scrolled',window.scrollY>6);};onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
   /* mobile nav */
   var t=document.getElementById('navToggle'),n=document.getElementById('navMenu');
   if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');t.innerHTML=o?'&times;':'&#9776;';});
