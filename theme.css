@@ -17,32 +17,40 @@
 
 :root{
 
-  /* ---------- PALETTE ---------- */
-  --white:      #F4F4F4;   /* page background */
-  --sand:       #DAC29E;   /* warm tan, section backgrounds */
-  --olive:      #4B5231;   /* primary dark green */
-  --olive-2:    #3b4227;   /* darker green, hovers */
-  --caramel:    #D39955;   /* accent / buttons */
-  --slate:      #6878A0;   /* secondary accent (blue) */
-  --charcoal:   #120E07;   /* body text */
+  /* ---------- PALETTE (Aug 2026 rebrand) ----------
+     Measured contrast against --white (#fefefe):
+       plum   12.36  excellent, safe at any text size
+       forest 10.00  excellent, safe at any text size
+       red     3.28  LARGE TEXT ONLY (24px+). Not for body copy.
+       pea     2.29  NEVER as text on a light background.
+     Pea is a fill/graphic color. On plum it reaches 5.39 and is
+     safe for text — that's why the nav CTA uses it.            */
 
-  --muted:      rgba(18,14,7,0.58);   /* secondary text */
-  --rule:       rgba(18,14,7,0.14);   /* hairlines + borders */
+  --white:   #fefefe;   /* main page background */
+  --cream:   #f9f9f1;   /* text-heavy section bg; light text on dark */
+  --plum:    #3b3139;   /* PRIMARY dark: nav, footer, bands, headings, body */
+  --plum-2:  #2c242a;   /* darker plum, hover states */
+  --forest:  #2f4739;   /* alternate dark — declared, not used by default.
+                           Swap --plum to this value to retone the site. */
+  --red:     #ff4a51;   /* accent: .h1 display, underlines, emphasis */
+  --pea:     #acb12e;   /* fills, icons, and text on dark ONLY */
+  --ink:     #3b3139;   /* body text (same value as plum) */
 
-  /* text colors used on top of olive backgrounds */
-  --on-olive:      #EFE7D8;
-  --on-olive-soft: rgba(239,231,216,0.82);
+  /* Secondary text. Kept at 0.70 minimum on purpose: plum is a
+     lighter base than the old charcoal, so the previous 0.58
+     would land at 3.48 and fail AA for body text. Don't lower. */
+  --muted:   rgba(59,49,57,0.70);
+  --rule:    rgba(59,49,57,0.14);
 
-  /* ---------- NEW BRAND COLORS (Aug 2026) ----------
-     Sampled directly from logo-color.png (the new nav lockup).
-     STATUS: only declared here so far. Not yet used anywhere
-     except this file. The rest of the site (buttons, links,
-     headings, the footer mark) still runs on the palette above.
-     Bill flagged this as the start of a rebrand but hasn't said
-     which elements should switch — don't apply these to existing
-     UI without checking first.                                */
-  --logo-coral: #FF4A51;   /* red from the "oe" tag + wordmark */
-  --logo-olive: #ACB12E;   /* bright yellow-green from the bin icon */
+  /* text colors used on top of plum/forest backgrounds */
+  --on-dark:      #f9f9f1;
+  --on-dark-soft: rgba(249,249,241,0.82);
+
+  /* Focus ring. Deliberately NOT a brand color — it must stay
+     distinct from every fill so it's always visible. Slate is
+     4.35 on white but only 2.84 on the plum nav, so the header
+     overrides it to cream at the bottom of this file.          */
+  --slate:   #6878A0;
 
   /* ---------- TYPE ---------- */
   /* --font    = body text
@@ -65,8 +73,7 @@
   --edge:    calc(max((100vw - 1180px)/2, 0px) + var(--pad));
 
   /* height of the nav logo image (logo-color.png). The nav bar's
-     own height follows this automatically. Footer mark is a
-     separate, unrelated size (still the old two-bar icon).     */
+     own height follows this automatically.                      */
   --nav-logo-h: clamp(58px,8vw,76px);
 
   /* ---------- TEXT WIDTHS ---------- */
@@ -93,4 +100,14 @@ h1, h2, h3, h4,
 .story .pull,
 .tcard blockquote {
   font-weight: var(--display-weight);
+}
+
+/* ============================================================
+   FOCUS RING ON THE DARK HEADER
+   Slate only reaches 2.84 against plum, below the 3.0 minimum
+   for a visible focus indicator. Cream reaches 11.78.
+   ============================================================ */
+.site-header a:focus-visible,
+.site-header button:focus-visible {
+  outline-color: var(--cream);
 }
