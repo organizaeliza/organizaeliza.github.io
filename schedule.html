@@ -27,7 +27,7 @@
   --on-dark:#f9f9f1;                  /* text on plum/forest */
   --on-dark-soft:rgba(249,249,241,0.82);
   --slate:#6878A0;                    /* focus ring on light bg only - not a brand color */
-  --nav-logo-h:clamp(34px,4.6vw,44px); --footer-logo-h:clamp(56px,7vw,68px);
+  --nav-logo-h:clamp(26px,3.4vw,34px); --footer-logo-h:clamp(56px,7vw,68px);
   /* type tokens */
   --font:'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;
   --display:'Kalnia',Georgia,'Times New Roman',serif;
@@ -111,7 +111,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
 .site-header.scrolled{background:rgba(59,49,57,0.99);border-bottom-color:rgba(249,249,241,0.24);
   box-shadow:0 1px 12px rgba(20,16,19,0.28)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px;
-  min-height:calc(var(--nav-logo-h) + 20px);padding:10px var(--pad)}
+  min-height:max(64px, calc(var(--nav-logo-h) + 20px));padding:10px var(--pad)}
 .brand{display:flex;align-items:center;gap:11px}
 .emark{display:block}
 .brand .emark{height:24px;width:auto}

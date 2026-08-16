@@ -72,13 +72,16 @@
   --measure: 64ch;
   --edge:    calc(max((100vw - 1180px)/2, 0px) + var(--pad));
 
-  /* Logo sizing. The nav bar's own height follows --nav-logo-h
-     automatically.
+  /* Logo sizing.
        nav    = logo-nav.png   horizontal lockup, aspect 4.63
        footer = logo-color.png stacked lockup,    aspect 2.22
      The two differ because a wide lockup needs less height to
-     stay legible than a stacked one does.                       */
-  --nav-logo-h:    clamp(34px,4.6vw,44px);
+     stay legible than a stacked one does.
+
+     The nav bar holds a 64px floor independently of this, so
+     shrinking the logo no longer shrinks the whole bar — change
+     --nav-logo-h freely and the bar keeps its proportions.      */
+  --nav-logo-h:    clamp(26px,3.4vw,34px);
   --footer-logo-h: clamp(56px,7vw,68px);
 
   /* ---------- TEXT WIDTHS ---------- */
