@@ -10,9 +10,15 @@
 
    NOTE ON FONTS: changing --font or --display below swaps the
    font everywhere, BUT the font also has to be downloaded. If
-   you switch to a font that isn't Archivo or Kalnia, the
-   Google Fonts <link> near the top of each page needs updating
-   too. Ask me and I'll do it across all 6 pages.
+   you switch to a font that isn't Plus Jakarta Sans or Kalnia,
+   the Google Fonts <link> near the top of each page needs
+   updating too. Ask me and I'll do it across all 6 pages.
+
+   IF A FONT CHANGE "DOESN'T WORK" ON THE LIVE SITE: check a
+   private/incognito window before changing any code. This file
+   is cached aggressively, so an old copy can survive a normal
+   reload. A font that renders on your phone but not your desktop
+   is a cached desktop copy, not a broken site.
    ============================================================ */
 
 :root{
@@ -33,7 +39,7 @@
   --forest:  #2f4739;   /* alternate dark — declared, not used by default.
                            Swap --plum to this value to retone the site. */
   --red:     #ff4a51;   /* accent: .h1 display, underlines, emphasis */
-  --pea:     #acb12e;   /* fills, icons, and text on dark ONLY */
+  --pea:     #bfc53a;   /* fills, icons, and text on dark ONLY */
   --ink:     #3b3139;   /* body text (same value as plum) */
 
   /* Secondary text. Kept at 0.70 minimum on purpose: plum is a
@@ -57,10 +63,13 @@
      --display = headings
      --display-weight = heading weight (Kalnia supports 100-700)
 
-     Kalnia is loaded at weights 400 and 500 via the Google Fonts
-     <link> at the top of each page. If you raise --display-weight
-     past 500, that link needs the new weight added or the browser
-     will fake it. Ask me and I'll update all 6 pages.            */
+     Currently loaded via the Google Fonts <link> on each page:
+       Kalnia            wght 100..700
+       Plus Jakarta Sans wght 200..800  (roman only — the italic
+                         axis was dropped, nothing uses <em>/<i>)
+     If you raise --display-weight past 700, or start using
+     italic body text, that link needs updating or the browser
+     will synthesize it. Ask me and I'll do all 6 pages.         */
   --font:           'Plus Jakarta Sans',sans-serif;
   --display:        'Kalnia',serif;
   --display-weight: 500;
