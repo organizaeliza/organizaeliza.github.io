@@ -78,10 +78,15 @@
      The two differ because a wide lockup needs less height to
      stay legible than a stacked one does.
 
-     The nav bar holds a 64px floor independently of this, so
-     shrinking the logo no longer shrinks the whole bar — change
-     --nav-logo-h freely and the bar keeps its proportions.      */
-  --nav-logo-h:    clamp(26px,3.4vw,34px);
+     The bar height is its own token, so the two are independent:
+     change --nav-logo-h and the bar keeps its height, change
+     --nav-bar-h and the logo keeps its size. The bar will still
+     grow if the logo ever exceeds it.
+
+     Desktop lands at 42px logo in an 88px bar (23px clearance).
+     Both clamps scale down on phones — 32px logo, 64px bar.     */
+  --nav-logo-h:    clamp(32px,4.2vw,42px);
+  --nav-bar-h:     clamp(64px,7.5vw,88px);
   --footer-logo-h: clamp(56px,7vw,68px);
 
   /* ---------- TEXT WIDTHS ---------- */
