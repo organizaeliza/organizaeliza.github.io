@@ -10,7 +10,7 @@
 
    NOTE ON FONTS: changing --font or --display below swaps the
    font everywhere, BUT the font also has to be downloaded. If
-   you switch to a font that isn't Archivo or Crimson Pro, the
+   you switch to a font that isn't Archivo or Kalnia, the
    Google Fonts <link> near the top of each page needs updating
    too. Ask me and I'll do it across all 6 pages.
    ============================================================ */
@@ -33,6 +33,17 @@
   --on-olive:      #EFE7D8;
   --on-olive-soft: rgba(239,231,216,0.82);
 
+  /* ---------- NEW BRAND COLORS (Aug 2026) ----------
+     Sampled directly from logo-color.png (the new nav lockup).
+     STATUS: only declared here so far. Not yet used anywhere
+     except this file. The rest of the site (buttons, links,
+     headings, the footer mark) still runs on the palette above.
+     Bill flagged this as the start of a rebrand but hasn't said
+     which elements should switch — don't apply these to existing
+     UI without checking first.                                */
+  --logo-coral: #FF4A51;   /* red from the "oe" tag + wordmark */
+  --logo-olive: #ACB12E;   /* bright yellow-green from the bin icon */
+
   /* ---------- TYPE ---------- */
   /* --font    = body text
      --display = headings
@@ -52,6 +63,11 @@
   --section: clamp(48px,6.5vw,88px);        /* vertical section rhythm */
   --measure: 64ch;
   --edge:    calc(max((100vw - 1180px)/2, 0px) + var(--pad));
+
+  /* height of the nav logo image (logo-color.png). The nav bar's
+     own height follows this automatically. Footer mark is a
+     separate, unrelated size (still the old two-bar icon).     */
+  --nav-logo-h: clamp(58px,8vw,76px);
 
   /* ---------- TEXT WIDTHS ---------- */
   /* short intros wider, body narrower, editorial widest */

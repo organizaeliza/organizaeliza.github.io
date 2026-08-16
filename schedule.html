@@ -18,7 +18,7 @@
   --caramel:#D39955; --slate:#6878A0; --charcoal:#120E07;
   --muted:rgba(18,14,7,0.58); --rule:rgba(18,14,7,0.14);
   --on-olive:#EFE7D8;                 /* sand-white text used on olive */
-  --on-olive-soft:rgba(239,231,216,0.82);
+  --on-olive-soft:rgba(239,231,216,0.82); --logo-coral:#FF4A51; --logo-olive:#ACB12E; --nav-logo-h:clamp(58px,8vw,76px);
   /* type tokens - swap both to Univers later to convert the whole site */
   --font:'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;
   --display:'Crimson Pro',Georgia,'Times New Roman',serif;
@@ -100,10 +100,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
 .site-header.scrolled{background:rgba(244,244,244,0.97);border-bottom-color:rgba(18,14,7,0.10);
   box-shadow:0 1px 10px rgba(18,14,7,0.05)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px;
-  min-height:64px;padding:10px var(--pad)}
+  min-height:calc(var(--nav-logo-h) + 20px);padding:10px var(--pad)}
 .brand{display:flex;align-items:center;gap:11px}
 .emark{display:block}
 .brand .emark{height:24px;width:auto}
+.brand .logo-lockup{display:block;height:var(--nav-logo-h);width:auto}
 .brand-name{font-family:var(--font);font-weight:600;font-size:16px;letter-spacing:.01em;color:var(--charcoal)}
 .nav{display:flex;align-items:center;gap:28px}
 .nav a{font-family:var(--font);font-weight:500;font-size:15px;color:rgba(18,14,7,0.7);
@@ -314,7 +315,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
 </head>
 <body><header class="site-header">
   <div class="wrap nav-in">
-    <a href="index.html" class="brand" aria-label="Organiza Eliza, home"><svg class="emark " viewBox="0 0 128 100" aria-hidden="true"><defs><mask id="ec-11"><rect width="128" height="100" fill="#fff"/><rect x="-24" y="20.5" width="67" height="18" rx="9" fill="#000"/><rect x="85" y="20.5" width="67" height="18" rx="9" fill="#000"/><rect x="-24" y="61.5" width="67" height="18" rx="9" fill="#000"/><rect x="85" y="61.5" width="67" height="18" rx="9" fill="#000"/></mask></defs><rect width="128" height="100" fill="#D39955" mask="url(#ec-11)"/></svg><span class="brand-name">Organiza Eliza</span></a>
+    <a href="index.html" class="brand" aria-label="Organiza Eliza, home"><img class="logo-lockup" src="logo-color.png" width="1753" height="789" alt="" loading="eager"></a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navMenu">&#9776;</button>
     <nav class="nav" id="navMenu" aria-label="Primary"><a href="services.html">Services</a><a href="gallery.html">Projects</a><a href="how-it-works.html">How It Works</a><a href="about.html">About</a><a href="schedule.html" class="book">Book a free consult</a></nav>
   </div>
