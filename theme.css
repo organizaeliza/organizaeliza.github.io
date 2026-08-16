@@ -61,8 +61,8 @@
      <link> at the top of each page. If you raise --display-weight
      past 500, that link needs the new weight added or the browser
      will fake it. Ask me and I'll update all 6 pages.            */
-  --font:           'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;
-  --display:        'Kalnia',Georgia,'Times New Roman',serif;
+  --font:           'Plus Jakarta Sans',sans-serif;
+  --display:        'Kalnia',serif;
   --display-weight: 500;
 
   /* ---------- LAYOUT + SPACING ---------- */
