@@ -139,6 +139,19 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
 .foot-links{display:flex;flex-wrap:wrap;gap:8px 24px}
 .foot-links a{color:var(--on-dark-soft);font-size:15px;font-weight:500}
 .foot-links a:hover{color:var(--white)}
+/* social icons - inline SVG so fill:currentColor adapts to light and dark backgrounds */
+.social{display:flex;align-items:center;gap:8px;list-style:none;margin:0;padding:0}
+.social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;
+  border-radius:999px;color:var(--plum);transition:color .18s ease,background-color .18s ease}
+.social a:hover{color:var(--red);background:rgba(59,49,57,0.07)}
+.social svg{display:block;width:20px;height:20px}
+.social .ig svg{width:22px;height:22px}
+.site-footer .social{margin-top:18px}
+.site-footer .social a{color:var(--on-dark-soft)}
+.site-footer .social a:hover{color:var(--white);background:rgba(249,249,241,0.12)}
+.about-contact{margin-top:18px;font-size:15px;color:var(--muted)}
+.about-contact a{color:var(--plum);font-weight:600;border-bottom:2px solid rgba(59,49,57,0.35)}
+.about-contact a:hover{border-bottom-color:var(--red);color:var(--red)}
 .foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:36px;padding-top:20px;
   border-top:1px solid rgba(249,249,241,0.2);font-size:13.5px;color:var(--on-dark-soft)}
 
@@ -389,12 +402,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
       <div>
         <div class="foot-brand"><img class="foot-logo" src="logo-color.png" alt="Organiza Eliza" width="1753" height="789"></div>
         <p class="foot-tag">Home organization for real life. Based in Prospect Heights, Brooklyn.</p>
+        <ul class="social"><li><a class="ig" href="https://www.instagram.com/organiza.eliza/" target="_blank" rel="noopener noreferrer" aria-label="Organiza Eliza on Instagram (opens in a new tab)"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"/><path d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"/><path d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"/></svg></a></li><li><a class="fb" href="https://www.facebook.com/profile.php?id=61586166171385" target="_blank" rel="noopener noreferrer" aria-label="Organiza Eliza on Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"/></svg></a></li></ul>
       </div>
       <nav class="foot-links" aria-label="Footer"><a href="services.html">Services</a><a href="gallery.html">Projects</a><a href="how-it-works.html">How It Works</a><a href="about.html">About</a><a href="schedule.html">Book a free consult</a></nav>
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 Organiza Eliza</span>
-      <span>eliza@organizaeliza.com</span>
+      <span><a href="mailto:eliza@organizaeliza.com">eliza@organizaeliza.com</a></span>
     </div>
   </div>
 </footer><script>
