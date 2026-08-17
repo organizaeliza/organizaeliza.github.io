@@ -39,7 +39,38 @@
   --forest:  #2f4739;   /* alternate dark — declared, not used by default.
                            Swap --plum to this value to retone the site. */
   --red:     #ff4a51;   /* accent: .h1 display, underlines, emphasis */
+
+  /* Red for SMALL red text on LIGHT backgrounds. --red above is only
+     3.28 on white — fine for the .h1 (42px+), the 2px nav underline
+     and icon hovers (graphics need 3.0), but short of the 4.5 that
+     15px text requires. Currently used only by the About contact
+     link hover. Do NOT use on the plum nav or band — a darker red on
+     a dark background goes the wrong way; keep --red there.        */
+  --red-text: #d63038;
   --pea:     #bfc53a;   /* fills, icons, and text on dark ONLY */
+
+  /* Service card fills (index + services). Same service = same color
+     on both pages, assigned by card order:
+       1 Whole-home organization   2 Moving support
+       3 Life transitions          4 Paper & digital
+     These are LIGHT on purpose. Card text is solid --ink; measured
+     contrast is 7.14 / 7.97 / 7.84 / 7.57, all passing AA.
+     WARNING: white text does NOT work on these — they are far too
+     light (1.6-2.3). And darkening them enough for white text makes
+     all four collapse into near-identical olives, because this
+     palette varies by lightness, not hue. Keep dark text here.     */
+  --card-1:  #c4cb58;   /* chartreuse */
+  --card-2:  #cfd397;   /* pale sage */
+  --card-3:  #afb87f;   /* muted olive-sage */
+  --card-4:  #c7d07e;   /* pale yellow-green */
+
+  /* Card 3 (Life transitions) is the most desaturated green in the
+     set, so plum on it reads muddy. This darker ink lifts it from
+     5.93 to 7.84, in line with the other three cards.
+     NOTE: darkening the CARD instead would backfire — it is already
+     mid-tone, so a darker green closes the gap to the text
+     (5.51 -> 4.65 -> 3.89). Change the ink, not the fill.         */
+  --ink-strong: #241d22;
   --ink:     #3b3139;   /* body text (same value as plum) */
 
   /* Secondary text. Kept at 0.70 minimum on purpose: plum is a
@@ -82,7 +113,7 @@
   --edge:    calc(max((100vw - 1180px)/2, 0px) + var(--pad));
 
   /* Logo sizing.
-       nav    = logo-nav.png   horizontal lockup, aspect 4.63
+       nav    = logo-white.png stacked lockup,    aspect 2.22
        footer = logo-color.png stacked lockup,    aspect 2.22
      The two differ because a wide lockup needs less height to
      stay legible than a stacked one does.
@@ -92,10 +123,11 @@
      --nav-bar-h and the logo keeps its size. The bar will still
      grow if the logo ever exceeds it.
 
-     Desktop lands at 42px logo in an 88px bar (23px clearance).
-     Both clamps scale down on phones — 32px logo, 64px bar.     */
-  --nav-logo-h:    clamp(32px,4.2vw,42px);
-  --nav-bar-h:     clamp(64px,7.5vw,88px);
+     Desktop lands at 60px logo in an 88px bar (14px clearance).
+     Phones get 48px logo in a 72px bar. The stacked lockup needs
+     more height than the old horizontal one to stay legible.    */
+  --nav-logo-h:    clamp(48px,4.7vw,60px);
+  --nav-bar-h:     clamp(72px,7.5vw,88px);
   --footer-logo-h: clamp(56px,7vw,68px);
 
   /* ---------- TEXT WIDTHS ---------- */

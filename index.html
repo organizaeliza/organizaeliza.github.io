@@ -20,15 +20,15 @@
   --plum:#3b3139;                     /* PRIMARY dark: nav, footer, bands, headings, body */
   --plum-2:#2c242a;                   /* darker plum, hovers */
   --forest:#2f4739;                   /* alternate dark, available - unused by default */
-  --red:#ff4a51;                      /* accent: underlines, .h1 display, emphasis */
-  --pea:#bfc53a;                      /* FILL ONLY - fails contrast as text on light */
+  --red:#ff4a51; --red-text:#d63038;                      /* accent: underlines, .h1 display, emphasis */
+  --pea:#bfc53a; --card-1:#c4cb58; --card-2:#cfd397; --card-3:#afb87f; --card-4:#c7d07e; --ink-strong:#241d22;                      /* FILL ONLY - fails contrast as text on light */
   --ink:#3b3139;                      /* body text (same as plum) */
   --muted:rgba(59,49,57,0.70);        /* secondary text - 0.70 min to stay AA on white */
   --rule:rgba(59,49,57,0.14);
   --on-dark:#f9f9f1;                  /* text on plum/forest */
   --on-dark-soft:rgba(249,249,241,0.82);
   --slate:#6878A0;                    /* focus ring on light bg only - not a brand color */
-  --nav-logo-h:clamp(32px,4.2vw,42px); --nav-bar-h:clamp(64px,7.5vw,88px); --footer-logo-h:clamp(56px,7vw,68px);
+  --nav-logo-h:clamp(48px,4.7vw,60px); --nav-bar-h:clamp(72px,7.5vw,88px); --footer-logo-h:clamp(56px,7vw,68px);
   /* type tokens */
   --font:'Plus Jakarta Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   --display:'Kalnia',Georgia,'Times New Roman',serif;
@@ -152,7 +152,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
 .site-footer .social a:hover{color:var(--white);background:rgba(249,249,241,0.12)}
 .about-contact{margin-top:18px;font-size:15px;color:var(--muted)}
 .about-contact a{color:var(--plum);font-weight:600;border-bottom:2px solid rgba(59,49,57,0.35)}
-.about-contact a:hover{border-bottom-color:var(--red);color:var(--red)}
+.about-contact a:hover{border-bottom-color:var(--red-text);color:var(--red-text)}
 .foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:36px;padding-top:20px;
   border-top:1px solid rgba(249,249,241,0.2);font-size:13.5px;color:var(--on-dark-soft)}
 
@@ -169,6 +169,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
 /* ---- home services cards ---- */
 .cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .cards4 .card{background:var(--pea);border-radius:4px;padding:24px 22px}
+.cards4 .card:nth-child(1){background:var(--card-1)}
+.cards4 .card:nth-child(2){background:var(--card-2)}
+.cards4 .card:nth-child(3){background:var(--card-3)}
+.cards4 .card:nth-child(4){background:var(--card-4)}
+.cards4 .card:nth-child(3) h3,.cards4 .card:nth-child(3) p{color:var(--ink-strong)}
 .cards4 .card h3{color:var(--ink);font-family:var(--font);font-weight:700;font-size:17px;line-height:1.25;margin-bottom:8px}
 .cards4 .card p{font-size:14px;line-height:1.5;color:var(--ink)}
 @media(max-width:820px){.cards4{grid-template-columns:1fr 1fr}}
@@ -263,9 +268,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
 .scard{background:var(--cream);border-radius:4px;padding:clamp(24px,3vw,34px)}
 .scard .scard-title{font-family:var(--display);color:var(--plum);font-weight:500;
   font-size:clamp(22px,2.2vw,26px);line-height:1.15;margin-bottom:10px}
-.scard p{color:rgba(59,49,57,0.82);font-size:16px;line-height:1.55}
+.scard p{color:var(--ink);font-size:16px;line-height:1.55}
 .roomcols{columns:2;column-gap:30px;margin-top:16px}
-.roomcols li{list-style:none;font-size:15px;line-height:1.5;padding:3px 0 3px 16px;position:relative;break-inside:avoid;color:rgba(59,49,57,0.82)}
+.roomcols li{list-style:none;font-size:15px;line-height:1.5;padding:3px 0 3px 16px;position:relative;break-inside:avoid;color:var(--ink)}
 .roomcols li::before{content:"";position:absolute;left:0;top:13px;width:7px;height:2px;background:var(--plum)}
 .rate-note{margin-top:36px;max-width:64ch;padding-top:22px;border-top:1px solid var(--rule);
   font-size:15px;line-height:1.6;color:var(--muted)}
@@ -340,7 +345,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{
 </head>
 <body><header class="site-header">
   <div class="wrap nav-in">
-    <a href="index.html" class="brand" aria-label="Organiza Eliza, home"><img class="logo-lockup" src="logo-nav.png" width="3800" height="820" alt="" loading="eager"></a>
+    <a href="index.html" class="brand" aria-label="Organiza Eliza, home"><img class="logo-lockup" src="logo-white.png" width="1753" height="789" alt="" loading="eager"></a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navMenu">&#9776;</button>
     <nav class="nav" id="navMenu" aria-label="Primary"><a href="services.html">Services</a><a href="gallery.html">Projects</a><a href="how-it-works.html">How It Works</a><a href="about.html">About</a><a href="schedule.html" class="book">Book a free consult</a></nav>
   </div>
