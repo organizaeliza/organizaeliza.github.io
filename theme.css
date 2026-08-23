@@ -49,28 +49,15 @@
   --red-text: #d63038;
   --pea:     #bfc53a;   /* fills, icons, and text on dark ONLY */
 
-  /* Service card fills (index + services). Same service = same color
-     on both pages, assigned by card order:
-       1 Whole-home organization   2 Moving support
-       3 Life transitions          4 Paper & digital
-     These are LIGHT on purpose. Card text is solid --ink; measured
-     contrast is 7.14 / 7.97 / 7.84 / 7.57, all passing AA.
-     WARNING: white text does NOT work on these — they are far too
-     light (1.6-2.3). And darkening them enough for white text makes
-     all four collapse into near-identical olives, because this
-     palette varies by lightness, not hue. Keep dark text here.     */
-  --card-1:  #c4cb58;   /* chartreuse */
-  --card-2:  #cfd397;   /* pale sage */
-  --card-3:  #afb87f;   /* muted olive-sage */
-  --card-4:  #c7d07e;   /* pale yellow-green */
-
-  /* Card 3 (Life transitions) is the most desaturated green in the
-     set, so plum on it reads muddy. This darker ink lifts it from
-     5.93 to 7.84, in line with the other three cards.
-     NOTE: darkening the CARD instead would backfire — it is already
-     mid-tone, so a darker green closes the gap to the text
-     (5.51 -> 4.65 -> 3.89). Change the ink, not the fill.         */
-  --ink-strong: #241d22;
+  /* Card fills.
+       --card-fill  = the "How I can help" cards (index) and the
+                      service cards (services). One colour for all
+                      four; measured 7.71 with solid --ink text.
+       --tcard-fill = testimonial cards, which sit on the plum band
+                      (10.25 against it, and 10.25 for --ink on top).
+     Both are light, so keep DARK text on them — white would vanish. */
+  --card-fill:  #cfcace;   /* light purple-grey */
+  --tcard-fill: #ebebc9;   /* light green */
   --ink:     #3b3139;   /* body text (same value as plum) */
 
   /* Secondary text. Kept at 0.70 minimum on purpose: plum is a
@@ -113,8 +100,8 @@
   --edge:    calc(max((100vw - 1180px)/2, 0px) + var(--pad));
 
   /* Logo sizing.
-       nav    = logo-white.png stacked lockup,    aspect 2.22
-       footer = logo-color.png stacked lockup,    aspect 2.22
+       nav    = logo-color-horiz-web.png horizontal, aspect 5.33
+       footer = logo-white.png stacked lockup,    aspect 2.24
      The two differ because a wide lockup needs less height to
      stay legible than a stacked one does.
 
@@ -123,11 +110,11 @@
      --nav-bar-h and the logo keeps its size. The bar will still
      grow if the logo ever exceeds it.
 
-     Desktop lands at 60px logo in an 88px bar (14px clearance).
-     Phones get 48px logo in a 72px bar. The stacked lockup needs
-     more height than the old horizontal one to stay legible.    */
-  --nav-logo-h:    clamp(48px,4.7vw,60px);
-  --nav-bar-h:     clamp(72px,7.5vw,88px);
+     Desktop lands at 42px logo (224px wide) in an 88px bar.
+     Phones get 32px logo in a 64px bar. A horizontal lockup needs
+     less height than a stacked one to stay legible.             */
+  --nav-logo-h:    clamp(32px,4.2vw,42px);
+  --nav-bar-h:     clamp(64px,7.5vw,88px);
   --footer-logo-h: clamp(56px,7vw,68px);
 
   /* ---------- TEXT WIDTHS ---------- */
