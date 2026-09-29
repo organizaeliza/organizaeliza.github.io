@@ -1,0 +1,10 @@
+# organizaeliza.com
+
+User-agent: *
+Allow: /
+
+# The private booking page is unlisted, not secret. It is kept out of
+# search by a noindex tag on the page itself. Listing it here would
+# publish the URL and would also stop crawlers from reading the noindex.
+
+Sitemap: https://organizaeliza.com/sitemap.xml
